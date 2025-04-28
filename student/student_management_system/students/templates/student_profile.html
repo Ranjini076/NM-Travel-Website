@@ -1,0 +1,9 @@
+<h2>Profile: {{ student.user.username }}</h2>
+<p>Email: {{ student.user.email }}</p>
+<p>Courses:</p>
+<ul>
+    {% for course in student.courses.all %}
+    <li>{{ course.course_name }}</li>
+    {% endfor %}
+</ul>
+<a href="{% url 'dashboard' %}">Back to Dashboard</a>
